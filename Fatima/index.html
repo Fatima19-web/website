@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bootstrap Form Validation</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="bg-light py-5">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8 col-xl-7">
+        <div class="card shadow-sm border-0 rounded-4">
+          <div class="card-body p-4 p-md-5">
+            <h1 class="h3 mb-1">Signup Form</h1>
+            <p class="text-secondary mb-4">Bootstrap 5 validation with custom rules.</p>
+
+            <div id="success" class="alert alert-success d-none" role="alert">
+              <strong>All set!</strong> Your form is valid and was "submitted" (demo).
+            </div>
+
+            <form id="signupForm" class="needs-validation" novalidate>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label for="name" class="form-label required">Full name</label>
+                  <input type="text" class="form-control" id="name" name="name" required minlength="3" />
+                  <div class="invalid-feedback">Please enter your full name.</div>
+                </div>
+
+                <div class="col-md-6">
+                  <label for="email" class="form-label required">Email</label>
+                  <input type="email" class="form-control" id="email" name="email" required />
+                  <div class="invalid-feedback">Enter a valid email address.</div>
+                </div>
+
+                <div class="col-md-6">
+                  <label for="password" class="form-label required">Password</label>
+                  <input type="password" class="form-control" id="password" name="password" required minlength="8" />
+                  <div class="invalid-feedback">Password must be at least 8 characters.</div>
+                </div>
+
+                <div class="col-md-6">
+                  <label for="confirmPassword" class="form-label required">Confirm password</label>
+                  <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" required />
+                  <div class="invalid-feedback">Passwords must match.</div>
+                </div>
+
+                <div class="col-12">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="1" id="terms" required />
+                    <label class="form-check-label required" for="terms">I agree to the Terms</label>
+                    <div class="invalid-feedback">You must agree before submitting.</div>
+                  </div>
+                </div>
+
+                <div class="col-12 d-flex gap-2 pt-2">
+                  <button class="btn btn-primary" type="submit">Submit</button>
+                  <button class="btn btn-outline-secondary" type="reset">Reset</button>
+                </div>
+              </div>
+            </form>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
